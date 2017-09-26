@@ -25,7 +25,7 @@
 		$clanci= mysqli_fetch_all($rezultat, MYSQLI_ASSOC);	
 	foreach ($clanci as $clanak) {
 		echo "<p>";
-		echo $clanak['naslov'];
+		echo "<a style='margin-left:10px' href='pregled_clanka.php?id={$clanak['id']}'>{$clanak['naslov']}</a>";
 		echo "<a style='margin-left:10px' href='izmena_clanka.php?id={$clanak['id']}'>Izmeni</a>";
 		echo "<a style='margin-left:10px' href='#' class='brisanje_clanka' clanak_id='{$clanak['id']}' clanak_naslov='{$clanak['naslov']}'>Izbrisi</a>";
 		echo "</p>";

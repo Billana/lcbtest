@@ -45,7 +45,7 @@
 	<div style="width:500px;">
 		<table border="0" cellpadding="10" cellspacing="0" width="500" align="center" class="tblSaveForm">
 			<tr class="tableheader">
-				<td colspan="2">Napisi clanak</td>
+				<td colspan="2">Izmena clanak</td>
 			</tr>
 			<tr>
 				<td><label>Naslov</label></td>

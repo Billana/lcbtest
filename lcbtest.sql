@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2017 at 10:05 PM
+-- Generation Time: Sep 26, 2017 at 09:34 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -39,7 +39,7 @@ CREATE TABLE `clanak` (
 --
 
 INSERT INTO `clanak` (`id`, `naslov`, `tekst`, `kategorija`, `autor`) VALUES
-(18, 'Naucni Clanak', 'Tekst naucnog clanka', 14, 1);
+(18, 'Naucni clanak', 'Tekst naucnog clanka', 14, 1);
 
 -- --------------------------------------------------------
 
@@ -58,6 +58,19 @@ CREATE TABLE `kategorija` (
 
 INSERT INTO `kategorija` (`id`, `naslov`) VALUES
 (14, 'naucna');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `komentari`
+--
+
+CREATE TABLE `komentari` (
+  `id` int(11) NOT NULL,
+  `clanak` int(11) NOT NULL,
+  `tekst` text NOT NULL,
+  `autor` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -96,6 +109,12 @@ ALTER TABLE `kategorija`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `komentari`
+--
+ALTER TABLE `komentari`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `korisnici`
 --
 ALTER TABLE `korisnici`
@@ -115,6 +134,11 @@ ALTER TABLE `clanak`
 --
 ALTER TABLE `kategorija`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT for table `komentari`
+--
+ALTER TABLE `komentari`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `korisnici`
 --
