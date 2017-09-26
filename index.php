@@ -15,6 +15,7 @@
 	$autor = mysqli_fetch_row($result);
 	$autor = $autor[0];
 ?>
+<br><br>
 <div>
 <p>Lista svih clanaka</p>
 <?php
@@ -25,15 +26,16 @@
 	foreach ($clanci as $clanak) {
 		echo "<p>";
 		echo $clanak['naslov'];
-		echo "<a href='izmena_clanka.php?id={$clanak['id']}'>Izmeni</a>";
-		echo "<a href='#' class='brisanje_clanka' clanak_id='{$clanak['id']}' clanak_naslov='{$clanak['naslov']}'>Izbrisi</a>";
+		echo "<a style='margin-left:10px' href='izmena_clanka.php?id={$clanak['id']}'>Izmeni</a>";
+		echo "<a style='margin-left:10px' href='#' class='brisanje_clanka' clanak_id='{$clanak['id']}' clanak_naslov='{$clanak['naslov']}'>Izbrisi</a>";
 		echo "</p>";
 	}
 	}
 ?>
-<p><a href="clanak.php">Kreiraj novi clanak.</a>
+<p><a href="clanak.php">+ Kreiraj novi clanak.</a>
 </p>
 </div>
+<br>
 <div>
 <p>Lista svih kategorija</p>
 <?php
@@ -44,15 +46,16 @@
 	foreach ($kategorije as $kategorija) {
 		echo "<p>";
 		echo $kategorija['naslov'];
-		echo "<a href='izmena_kategorije.php?id={$kategorija['id']}'>Izmeni</a>";
-		echo "<a href='#' class='brisanje_kategorije' kategorija_id='{$kategorija['id']}' kategorija_naslov='{$kategorija['naslov']}'>Izbrisi</a>";
+		echo "<a style='margin-left:10px' href='izmena_kategorije.php?id={$kategorija['id']}'>Izmeni</a>";
+		echo "<a style='margin-left:10px' href='#' class='brisanje_kategorije' kategorija_id='{$kategorija['id']}' kategorija_naslov='{$kategorija['naslov']}'>Izbrisi</a>";
 		echo "</p>";
 	}
 	}
 ?>
-<p><a href="kategorija.php">Kreiraj novu kategoriju.</a>
+<p><a href="kategorija.php">+ Kreiraj novu kategoriju.</a>
 </p>
 </div>
+<br>
 <a href="logout.php">Izloguj se</a>
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
